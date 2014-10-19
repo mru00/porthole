@@ -8,21 +8,14 @@
 
 
 
-<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 <script src="porthole.js"></script>
 
 <style>
-body {
-  font-family: 'Shadows Into Light';
-}
 
-.porthole canvas {
-  /* background-color: blue; */
+.porthole {
 }
 </style>
 
@@ -32,7 +25,7 @@ body {
 
 $(function() {
 
-    $('#porthole').porthole({ font: 'normal 60pt "Shadows Into Light"' });
+    $('#porthole').porthole({ font: 'normal 60pt sans-serif' });
 
     $('#slider').slider({ min: 0, max: 400, value: 5, stop: function(event, ui) { 
       $('#porthole').porthole('option', {value: $(this).val()});
@@ -51,6 +44,9 @@ $(function() {
 <body>
 
 
+<noscript>
+  you need javascript.
+</noscript>
 
 <div id="porthole"></div>
 </div><input type="range" name="slider-1" id="slider" value="60" min="0" max="400">
