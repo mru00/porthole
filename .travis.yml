@@ -1,6 +1,6 @@
-script: true
+script: uglify-js porthole.js
 language: node_js
 node_js:
   - 0.8
 before_script:
-  - npm install -g uglify
+  - npm install -g uglify-js
