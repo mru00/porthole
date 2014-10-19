@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2014 mru@sisyphus.teil.cc
+* https://github.com/mru00/porthole
 */
 
 (function( factory ) {
@@ -63,9 +64,9 @@
       this.gradient_palette = ctx.getImageData(0, 0, 256, 1).data;
     },
     heatmap2: function(value) {
-      var value1 = Math.min( Math.round(2.56 * value, 100), 255);
-      var off = value1 * 4;
-      var rgb =  "rgb("+this.gradient_palette[off+0]+","+this.gradient_palette[off+1]+","+this.gradient_palette[off+2]+")";
+      var value_sat = Math.min( Math.round(2.56 * value), 255);
+      var off = value_sat * 4;
+      var rgb = "rgb("+this.gradient_palette[off+0]+","+this.gradient_palette[off+1]+","+this.gradient_palette[off+2]+")";
       return rgb;
     },
 
