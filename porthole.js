@@ -47,7 +47,7 @@
       var h = (100 - value);
       var s = 100;
       var l = value * 0.50;
-      return "hsl("+h+",100%,"+l+"%)";
+      return "hsl("+h+","+s+"%,"+l+"%)";
     },
     createpalette: function() {
       var canvas = $('<canvas width="256" height="1">');
@@ -74,12 +74,12 @@
       return this.heatmap2(value);
     },
 
-    get_text_color: function(value) {
+    get_text_color: function(/*value*/) {
       return this.options.color_text;
     },
 
     format_number: function(value) {
-      return Math.floor(this.options.value) + "%";
+      return Math.floor(value) + "%";
     },
 
     widget: function() {
