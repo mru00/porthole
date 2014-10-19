@@ -1,4 +1,4 @@
-script: uglifyjs porthole.js
+script: uglifyjs --lint porthole.js
 language: node_js
 node_js:
   - 0.8
